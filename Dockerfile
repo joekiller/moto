@@ -4,6 +4,7 @@ ADD . /moto/
 ENV PYTHONUNBUFFERED 1
 
 WORKDIR /moto/
+COPY generate-keys.sh /root
 RUN pip install ".[server]"
 
 CMD ["moto_server"]
